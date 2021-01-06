@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
       ),
       body: Column(
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
             onTap: () {
