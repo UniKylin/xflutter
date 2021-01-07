@@ -1,10 +1,17 @@
+import 'package:dokit/dokit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xflutter/pages/home_page.dart';
 import 'package:xflutter/provider/cart.dart';
 
 void main() {
-  runApp(MyApp());
+  DoKit.runApp(
+    app:DoKitApp(
+      MyApp()
+    ),
+    useInRelease: true,
+    releaseAction: () => {},
+  );
 }
 
 class MyApp extends StatelessWidget {
