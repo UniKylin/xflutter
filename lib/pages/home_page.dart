@@ -3,6 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:xflutter/pages/cart/cart_index_page.dart';
 import 'package:xflutter/provider/cart.dart';
 
+import 'linear_layout/linear_layout_page.dart';
+
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
 
@@ -41,6 +43,20 @@ class _HomePageState extends State<HomePage> {
             },
             child: Center(
               child: Text('购物车案例'),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              //
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LinearLayoutPage(),
+                ),
+              );
+            },
+            child: Center(
+              child: Text('线性布局案例'),
             ),
           ),
           Text("counter >>> ${counter.count}"),
