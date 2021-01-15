@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:xflutter/pages/eventbus/event_emitter.dart';
+import 'package:xflutter/pages/eventbus/event_page.dart';
 import 'package:xflutter/pages/home_page.dart';
+import 'package:xflutter/pages/linear_layout/linear_layout_page.dart';
 
 //配置路由
 final routes = {
   '/': (context) => HomePage(),
+  '/linear_layout': (context) => LinearLayoutPage(),
+  '/event_page': (context) => EventPage(),
+  '/event_emitter': (context) => EventEmitterPage(),
 };
 
 //固定写法

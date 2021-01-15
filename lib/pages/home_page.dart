@@ -47,19 +47,28 @@ class _HomePageState extends State<HomePage> {
           ),
           InkWell(
             onTap: () {
-              //
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LinearLayoutPage(),
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => LinearLayoutPage(),
+              //   ),
+              // );
+              Navigator.pushNamed(context, '/linear_layout');
             },
             child: Center(
               child: Text('线性布局案例'),
             ),
           ),
           Text("counter >>> ${counter.count}"),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/event_page');
+              },
+              child: Text('EventBus'),
+            ),
+          ),
         ],
       ),
     );

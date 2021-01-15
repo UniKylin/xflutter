@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:xflutter/pages/home_page.dart';
 import 'package:xflutter/provider/cart.dart';
+import 'package:xflutter/route/router.dart';
 
 void main() {
   DoKit.runApp(
-    app:DoKitApp(
-      MyApp()
-    ),
+    app: DoKitApp(MyApp()),
     useInRelease: true,
     releaseAction: () => {},
   );
@@ -28,6 +27,8 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: HomePage(),
+        onGenerateRoute: onGenerateRoute,
+        initialRoute: '/',
       ),
     );
   }
