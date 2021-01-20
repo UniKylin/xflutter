@@ -69,6 +69,15 @@ class _HomePageState extends State<HomePage> {
               child: Text('EventBus'),
             ),
           ),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/ant');
+              },
+              child: Text('Router Entry'),
+            ),
+          ),
         ],
       ),
     );

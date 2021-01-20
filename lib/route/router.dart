@@ -3,18 +3,23 @@ import 'package:xflutter/pages/eventbus/event_emitter.dart';
 import 'package:xflutter/pages/eventbus/event_page.dart';
 import 'package:xflutter/pages/home_page.dart';
 import 'package:xflutter/pages/linear_layout/linear_layout_page.dart';
+import 'package:xflutter/pages/router/ant.dart';
+import 'package:xflutter/pages/router/bear.dart';
+import 'package:xflutter/pages/router/cat.dart';
+import 'package:xflutter/pages/router/dog.dart';
 
-//配置路由
 final routes = {
   '/': (context) => HomePage(),
   '/linear_layout': (context) => LinearLayoutPage(),
   '/event_page': (context) => EventPage(),
   '/event_emitter': (context) => EventEmitterPage(),
+  '/ant': (context) => AntPage(),
+  '/bear': (context) => BearPage(),
+  '/cat': (context) => CatPage(),
+  '/dog': (context) => DogPage(),
 };
 
-//固定写法
 var onGenerateRoute = (RouteSettings settings) {
-// 统一处理
   final String name = settings.name;
   final Function pageContentBuilder = routes[name];
   if (pageContentBuilder != null) {
