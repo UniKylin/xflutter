@@ -1,7 +1,7 @@
 import 'package:dokit/dokit.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:xflutter/pages/home_page.dart';
+import 'package:xflutter/pages/index_page.dart';
 import 'package:xflutter/provider/cart.dart';
 import 'package:xflutter/route/router.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomePage(),
+        home: IndexPage(),
         onGenerateRoute: onGenerateRoute,
         initialRoute: '/',
       ),

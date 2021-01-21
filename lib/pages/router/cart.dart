@@ -1,40 +1,42 @@
 import 'package:flutter/material.dart';
 
-class DogPage extends StatefulWidget {
-  DogPage({Key key}) : super(key: key);
+class CartPage extends StatefulWidget {
+  CartPage({Key key}) : super(key: key);
 
   @override
-  _DogPageState createState() => _DogPageState();
+  _CartPageState createState() => _CartPageState();
 }
 
-class _DogPageState extends State<DogPage> {
+class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dog Page'),
+        title: Text('路由购物车页'),
+        centerTitle: true,
         backgroundColor: Colors.deepOrange,
+        leading: InkWell(
+          onTap: () => {
+            Navigator.of(context).pop(),
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.grey,
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.fromLTRB(15, 10, 15, 10),
           child: Column(
             children: [
-              RichText(
-                text: TextSpan(
-                  text: 'Bear Page',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 16,
-                  ),
-                ),
-              ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(context, '/ant', (Route<dynamic> route) => false);
+                  Navigator.pushNamed(context, '/route_pay');
                 },
-                child: Text('PushNamedAndRemoveUntil Go Ant Page '),
+                child: Text('Push 到支付结算'),
               ),
+              
               RaisedButton(
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(context, '/bear', ModalRoute.withName('/ant'));

@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
 
-class AntPage extends StatefulWidget {
-  AntPage({Key key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  LoginPage({Key key}) : super(key: key);
 
   @override
-  _AntPageState createState() => _AntPageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _AntPageState extends State<AntPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          '路由演示',
+          '路由登录页',
+        ),
+        centerTitle: true,
+        leading: InkWell(
+          onTap: () => {
+            Navigator.of(context).pop(),
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.grey,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -39,9 +49,9 @@ class _AntPageState extends State<AntPage> {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/bear');
+                  Navigator.pushNamed(context, '/route_home');
                 },
-                child: Text('Go Bear Page'),
+                child: Text('路由首页'),
               ),
               Text(
                 '1. pushNamedAndRemoveUntil',
@@ -60,9 +70,9 @@ class _AntPageState extends State<AntPage> {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/bear');
+                  Navigator.pushNamed(context, '/route_home');
                 },
-                child: Text('Go Bear Page'),
+                child: Text('路由首页'),
               ),
               Text(
                 '我们有一个需要付款交易的购物应用。在应用程序中，一旦用户完成了支付交易，就应该从堆栈中删除所有与交易或购物车相关的页面，并且用户应该被带到 PaymentConfirmationScreen ,单击后退按钮应该只将它们带回到 ProductsListScreen 或 HomeScreen',
@@ -73,9 +83,9 @@ class _AntPageState extends State<AntPage> {
               ),
               RaisedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/bear');
+                  Navigator.pushNamed(context, '/route_home');
                 },
-                child: Text('Go Bear Page'),
+                child: Text('路由首页'),
               ),
             ],
           ),

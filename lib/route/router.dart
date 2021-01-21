@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:xflutter/pages/eventbus/event_emitter.dart';
 import 'package:xflutter/pages/eventbus/event_page.dart';
-import 'package:xflutter/pages/home_page.dart';
+import 'package:xflutter/pages/index_page.dart';
 import 'package:xflutter/pages/linear_layout/linear_layout_page.dart';
-import 'package:xflutter/pages/router/ant.dart';
-import 'package:xflutter/pages/router/bear.dart';
-import 'package:xflutter/pages/router/cat.dart';
-import 'package:xflutter/pages/router/dog.dart';
+import 'package:xflutter/pages/router/login.dart';
+import 'package:xflutter/pages/router/home.dart';
+import 'package:xflutter/pages/router/cart.dart';
+import 'package:xflutter/pages/router/pay.dart';
+import 'package:xflutter/pages/router/pay_result.dart';
+import 'package:xflutter/pages/router/products.dart';
 
 final routes = {
-  '/': (context) => HomePage(),
+  '/': (context) => IndexPage(),
   '/linear_layout': (context) => LinearLayoutPage(),
   '/event_page': (context) => EventPage(),
   '/event_emitter': (context) => EventEmitterPage(),
-  '/ant': (context) => AntPage(),
-  '/bear': (context) => BearPage(),
-  '/cat': (context) => CatPage(),
-  '/dog': (context) => DogPage(),
+  '/route_login': (context) => LoginPage(),
+  '/route_home': (context) => HomePage(),
+  '/route_products': (context) => ProductsPage(),
+  '/route_cart': (context) => CartPage(),
+  '/route_pay': (context) => PayPage(),
+  '/route_pay_result': (context) => PayResultPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {

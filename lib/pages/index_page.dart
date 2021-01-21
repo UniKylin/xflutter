@@ -3,16 +3,14 @@ import 'package:provider/provider.dart';
 import 'package:xflutter/pages/cart/cart_index_page.dart';
 import 'package:xflutter/provider/cart.dart';
 
-import 'linear_layout/linear_layout_page.dart';
-
-class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+class IndexPage extends StatefulWidget {
+  IndexPage({Key key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _IndexPageState createState() => _IndexPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _IndexPageState extends State<IndexPage> {
   @override
   Widget build(BuildContext context) {
     final counter = Provider.of<Counter>(context);
@@ -73,9 +71,9 @@ class _HomePageState extends State<HomePage> {
             margin: EdgeInsets.only(top: 40),
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/ant');
+                Navigator.pushNamed(context, '/route_login');
               },
-              child: Text('Router Entry'),
+              child: Text('路由模拟'),
             ),
           ),
         ],
