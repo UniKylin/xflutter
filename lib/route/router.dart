@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xflutter/pages/dialog/dialog_page.dart';
 import 'package:xflutter/pages/eventbus/event_emitter.dart';
 import 'package:xflutter/pages/eventbus/event_page.dart';
 import 'package:xflutter/pages/index_page.dart';
@@ -21,6 +22,7 @@ final routes = {
   '/route_cart': (context) => CartPage(),
   '/route_pay': (context) => PayPage(),
   '/route_pay_result': (context) => PayResultPage(),
+  '/dialog': (context) => DialogPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
@@ -29,7 +31,8 @@ var onGenerateRoute = (RouteSettings settings) {
   if (pageContentBuilder != null) {
     if (settings.arguments != null) {
       final Route route = MaterialPageRoute(
-        builder: (context) => pageContentBuilder(context, arguments: settings.arguments),
+        builder: (context) =>
+            pageContentBuilder(context, arguments: settings.arguments),
       );
       return route;
     } else {

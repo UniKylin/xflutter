@@ -76,6 +76,15 @@ class _IndexPageState extends State<IndexPage> {
               child: Text('路由模拟'),
             ),
           ),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/dialog');
+              },
+              child: Text('弹窗'),
+            ),
+          ),
         ],
       ),
     );
