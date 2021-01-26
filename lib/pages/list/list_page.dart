@@ -20,25 +20,45 @@ class _ListPageState extends State<ListPage> {
             onTap: () {
               Navigator.pushNamed(context, '/listview');
             },
-            child: Text('垂直普通列表'),
+            child: Container(
+              height: 40,
+              child: Center(
+                child: Text('垂直普通列表'),
+              ),
+            ),
           ),
           InkWell(
             onTap: () {
               Navigator.pushNamed(context, '/listbuilder');
             },
-            child: Text('ListBuilder列表'),
+            child: Container(
+              height: 40,
+              child: Center(
+                child: Text('ListBuilder列表'),
+              ),
+            ),
           ),
           InkWell(
             onTap: () {
               Navigator.pushNamed(context, '/list_separated');
             },
-            child: Text('List Separated列表'),
+            child: Container(
+              height: 40,
+              child: Center(
+                child: Text('List Separated列表'),
+              ),
+            ),
           ),
           InkWell(
             onTap: () {
               Navigator.pushNamed(context, '/pull_refresh');
             },
-            child: Text('上拉加载数据'),
+            child: Container(
+              height: 40,
+              child: Center(
+                child: Text('上拉加载数据'),
+              ),
+            ),
           ),
         ],
       ),

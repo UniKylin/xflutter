@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 
 class PullRefreshPage extends StatefulWidget {
   PullRefreshPage({Key key}) : super(key: key);
@@ -38,7 +37,7 @@ class _PullRefreshPageState extends State<PullRefreshPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('下拉刷新上拉加载'),
+        title: Text('下拉刷新'),
         actions: [
           IconButton(
             icon: Icon(Icons.search_outlined),
