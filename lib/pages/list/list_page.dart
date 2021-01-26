@@ -60,6 +60,17 @@ class _ListPageState extends State<ListPage> {
               ),
             ),
           ),
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/drop_down_paging');
+            },
+            child: Container(
+              height: 40,
+              child: Center(
+                child: Text('下拉加载分页数据'),
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -4,6 +4,7 @@ import 'package:xflutter/pages/eventbus/event_emitter.dart';
 import 'package:xflutter/pages/eventbus/event_page.dart';
 import 'package:xflutter/pages/index_page.dart';
 import 'package:xflutter/pages/linear_layout/linear_layout_page.dart';
+import 'package:xflutter/pages/list/drop_down_paging.dart';
 import 'package:xflutter/pages/list/list_builder_page.dart';
 import 'package:xflutter/pages/list/list_page.dart';
 import 'package:xflutter/pages/list/list_separated.dart';
@@ -33,6 +34,7 @@ final routes = {
   '/listbuilder': (context) => ListBuilderPage(),
   '/list_separated': (context) => ListSeparatedPage(),
   '/pull_refresh': (context) => PullRefreshPage(),
+  '/drop_down_paging': (context) => DropDownPaging(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
@@ -41,8 +43,7 @@ var onGenerateRoute = (RouteSettings settings) {
   if (pageContentBuilder != null) {
     if (settings.arguments != null) {
       final Route route = MaterialPageRoute(
-        builder: (context) =>
-            pageContentBuilder(context, arguments: settings.arguments),
+        builder: (context) => pageContentBuilder(context, arguments: settings.arguments),
       );
       return route;
     } else {

@@ -10,6 +10,7 @@ const userSchema = new Schema({
   _id: {
     type: String,
     alias: 'id',
+    select: false,
   },
   name: {
     type: String,
