@@ -4,6 +4,11 @@ import 'package:xflutter/pages/eventbus/event_emitter.dart';
 import 'package:xflutter/pages/eventbus/event_page.dart';
 import 'package:xflutter/pages/index_page.dart';
 import 'package:xflutter/pages/linear_layout/linear_layout_page.dart';
+import 'package:xflutter/pages/list/list_builder_page.dart';
+import 'package:xflutter/pages/list/list_page.dart';
+import 'package:xflutter/pages/list/list_separated.dart';
+import 'package:xflutter/pages/list/list_view.dart';
+import 'package:xflutter/pages/list/pull_refresh.dart';
 import 'package:xflutter/pages/router/login.dart';
 import 'package:xflutter/pages/router/home.dart';
 import 'package:xflutter/pages/router/cart.dart';
@@ -23,6 +28,11 @@ final routes = {
   '/route_pay': (context) => PayPage(),
   '/route_pay_result': (context) => PayResultPage(),
   '/dialog': (context) => DialogPage(),
+  '/list': (context) => ListPage(),
+  '/listview': (context) => ListViewPage(),
+  '/listbuilder': (context) => ListBuilderPage(),
+  '/list_separated': (context) => ListSeparatedPage(),
+  '/pull_refresh': (context) => PullRefreshPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {

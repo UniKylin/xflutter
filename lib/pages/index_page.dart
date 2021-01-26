@@ -85,6 +85,15 @@ class _IndexPageState extends State<IndexPage> {
               child: Text('弹窗'),
             ),
           ),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            child: InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/list');
+              },
+              child: Text('列表'),
+            ),
+          ),
         ],
       ),
     );
