@@ -82,8 +82,13 @@ class _DropDownPagingState extends State<DropDownPaging> {
           itemCount: _personList.length,
           padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
           itemBuilder: (context, index) {
-            return ListTile(
-              title: Text('${index + 1} >>> ${_personList[index]['name']}'),
+            return Column(
+              children: [
+                ListTile(
+                  title: Text('${index + 1} >>> ${_personList[index]['name']}'),
+                ),
+                _hasMoreWidget(index),
+              ],
             );
           },
           separatorBuilder: (context, index) {
@@ -96,6 +101,20 @@ class _DropDownPagingState extends State<DropDownPaging> {
       );
     } else {
       return LoadingWidget();
+    }
+  }
+
+  Widget _hasMoreWidget(index) {
+    if (this._hasMore) {
+      return (index == this._personList.length - 1)
+          ? LoadingWidget()
+          : Text('');
+    } else {
+      return Center(
+        child: (index == this._personList.length - 1)
+            ? Text('--- 木有数据了 ---')
+            : Text(''),
+      );
     }
   }
 
