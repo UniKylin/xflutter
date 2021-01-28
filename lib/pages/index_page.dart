@@ -62,6 +62,15 @@ class _IndexPageState extends State<IndexPage> {
             margin: EdgeInsets.only(top: 40),
             child: InkWell(
               onTap: () {
+                Navigator.pushNamed(context, '/loading');
+              },
+              child: Text('加载页'),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            child: InkWell(
+              onTap: () {
                 Navigator.pushNamed(context, '/event_page');
               },
               child: Text('EventBus'),

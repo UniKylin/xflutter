@@ -10,6 +10,7 @@ import 'package:xflutter/pages/list/list_page.dart';
 import 'package:xflutter/pages/list/list_separated.dart';
 import 'package:xflutter/pages/list/list_view.dart';
 import 'package:xflutter/pages/list/pull_refresh.dart';
+import 'package:xflutter/pages/loading/loading_page.dart';
 import 'package:xflutter/pages/router/login.dart';
 import 'package:xflutter/pages/router/home.dart';
 import 'package:xflutter/pages/router/cart.dart';
@@ -35,6 +36,7 @@ final routes = {
   '/list_separated': (context) => ListSeparatedPage(),
   '/pull_refresh': (context) => PullRefreshPage(),
   '/drop_down_paging': (context) => DropDownPaging(),
+  '/loading': (context) => LoadingPage(),
 };
 
 var onGenerateRoute = (RouteSettings settings) {
@@ -43,7 +45,8 @@ var onGenerateRoute = (RouteSettings settings) {
   if (pageContentBuilder != null) {
     if (settings.arguments != null) {
       final Route route = MaterialPageRoute(
-        builder: (context) => pageContentBuilder(context, arguments: settings.arguments),
+        builder: (context) =>
+            pageContentBuilder(context, arguments: settings.arguments),
       );
       return route;
     } else {
