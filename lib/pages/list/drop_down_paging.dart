@@ -26,13 +26,13 @@ class _DropDownPagingState extends State<DropDownPaging> {
       responseType: ResponseType.plain,
     );
     Dio dio = new Dio(options);
-    Response response = await dio.get('http://192.168.1.6:9000/users');
+    Response response = await dio.get('http://192.168.1.6:9000/users?page_size=15');
     List<dynamic> res = json.decode(response.toString());
     print(res);
 
-    // this.setState(() {
-    //   datas = res;
-    // });
+    this.setState(() {
+      datas = res;
+    });
   }
 
   @override
@@ -43,10 +43,10 @@ class _DropDownPagingState extends State<DropDownPaging> {
       ),
       body: ListView.builder(
         physics: BouncingScrollPhysics(),
-        itemCount: _items.length,
+        itemCount: datas.length,
         itemBuilder: (context, index) {
           return ListTile(
-            title: Text(_items[index]),
+            title: Text(datas[index]['name']),
           );
         },
       ),
